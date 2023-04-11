@@ -1,0 +1,51 @@
+Command Line Interface (CLI) Library
+====================================
+
+NEXT VERSION
+------------
+
+INTERFACE CHANGE:
+-
+CHANGE:
+-
+FIX:
+-
+ADD:
+-
+
+V2.1.0 - 2012-03-20
+-------------------
+FIX:
+- call built-in cmds with context core (not with user data).
+ADD:
+- Group handling, allow to sort the commands into user defined groups.
+
+V2.0.2 - 2012-02-10
+-------------------
+CHANGE:
+- only use libtool, no manual definitions for libcli.a
+- correct some comments
+FIX:
+- define lib_cli_config.h also as interface header
+- duplicated short commands handling
+- cli_pipe_init: return of context ptr was missing
+ADD:
+- return code IFX_SUCCESS in cli_autogen_commands_register() generation
+- float type support for cli_sscanf()
+
+V2.0.1 - 2012-02-08
+-------------------
+- Minor script changes
+- compile fixes
+
+V2.0.0 - 2012-01-31
+-------------------
+- First inital version of the new CLI lib
+  - no global variables
+  - no user dependencies
+  - seperate pipe and console interface from the CLI core.
+  - use binary tree for command handling
+  - allocate tree nodes for all once at the beginning
+  - support of 2 user interfaces:
+    - print out via file (file descriptor, used for standard user space application)
+    - print out via buffer (output buffer, used for driver application)
